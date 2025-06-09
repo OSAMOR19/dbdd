@@ -9,6 +9,7 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import Image from "next/image"
+import dbdd from "@/components/image/dbbddlogo.svg"
 
 export function MainNav() {
   const pathname = usePathname()
@@ -50,27 +51,46 @@ export function MainNav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className="hidden items-center space-x-2 md:flex">
-            <Image src="/images/dbdd-logo.png" alt="DBDD Logo" width={40} height={40} className="h-8 w-auto" />
-            <span className="hidden font-bold sm:inline-block">DBDD & Desman</span>
+        {/* Left Logo */}
+        <div className="flex items-center">
+          <Link href="/" className="hidden md:flex items-center">
+            <Image 
+              src="/images/dbdd-logo.png" 
+              alt="DBDD Logo" 
+              width={70} 
+              height={35} 
+              className="object-contain" 
+            />
           </Link>
-          <nav className="hidden gap-6 md:flex">
-            {routes.map((route) => (
-              <Link
-                key={route.href}
-                href={route.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  route.active ? "text-foreground" : "text-foreground/60 hover:text-foreground/80",
-                )}
-              >
-                {route.label}
-              </Link>
-            ))}
-          </nav>
         </div>
-        <div className="flex items-center gap-2">
+        
+        {/* Centered Navigation */}
+        <nav className="hidden gap-6 md:flex justify-center">
+          {routes.map((route) => (
+            <Link
+              key={route.href}
+              href={route.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                route.active ? "text-foreground" : "text-foreground/60 hover:text-foreground/80",
+              )}
+            >
+              {route.label}
+            </Link>
+          ))}
+        </nav>
+        
+        {/* Right Logo and Controls */}
+        <div className="flex items-center gap-4">
+          <Link href="/" className="hidden md:flex items-center">
+            <Image 
+              src="/images/dddc-logo.png" 
+              alt="DDDC Logo" 
+              width={40} 
+              height={40} 
+              className="object-contain" 
+            />
+          </Link>
           <ModeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -84,7 +104,11 @@ export function MainNav() {
                 <SheetTitle>DBDD & Desman</SheetTitle>
                 <SheetDescription>Creative Media & Digital Solutions</SheetDescription>
               </SheetHeader>
-              <nav className="flex flex-col gap-4 pt-6">
+              <div className="flex justify-between items-center py-4">
+                <Image src="/images/dbdd-logo.png" alt="DBDD Logo" width={70} height={35} className="object-contain" />
+                <Image src="/images/dddc-logo.png" alt="DDDC Logo" width={40} height={40} className="object-contain" />
+              </div>
+              <nav className="flex flex-col gap-4 pt-2">
                 {routes.map((route) => (
                   <Link
                     key={route.href}

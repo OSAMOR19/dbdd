@@ -44,7 +44,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="relative w-full max-w-[500px] aspect-video">
+                <div className="relative w-full max-w-[750px] aspect-video">
                   <Image
                     src="/images/hero-image.png"
                     alt="DBDD & DDDC Creative Showcase"
