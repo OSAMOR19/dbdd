@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import desmond from "@/components/image/desmond.jpg"
 import banke from "@/components/image/banke.jpg"
+import logo from "@/components/image/dbbddlogo.svg"
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -43,8 +44,14 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="flex justify-center">
-                <div className="relative w-full max-w-[500px] aspect-video">
-                  <Image src="/images/about-story.jpg" alt="Our Story" fill className="object-cover rounded-xl" />
+                <div className="relative w-full max-w-[500px]">
+                  <Image 
+                    src={logo} 
+                    alt="Our Story" 
+                    width={500}
+                    height={500}
+                    className="w-full h-auto object-contain rounded-xl" 
+                  />
                 </div>
               </div>
             </div>
