@@ -2,7 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
+import desmond from "@/components/image/desmond.jpg"
+import banke from "@/components/image/banke.jpg"
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -104,16 +105,16 @@ export default function AboutPage() {
             <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-1.jpg" alt="Team Member" fill className="object-cover rounded-full" />
+                  <Image src={desmond} alt="Team Member" fill className="object-cover rounded-full" />
                 </div>
-                <h3 className="text-xl font-bold">John Doe</h3>
+                <h3 className="text-xl font-bold">Desmond Agu Enims</h3>
                 <p className="text-gray-500 dark:text-gray-400">Founder & CEO</p>
               </div>
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-2.jpg" alt="Team Member" fill className="object-cover rounded-full" />
+                  <Image src={banke} alt="Team Member" fill className="object-cover rounded-full" />
                 </div>
-                <h3 className="text-xl font-bold">Jane Smith</h3>
+                <h3 className="text-xl font-bold">Banke Agu</h3>
                 <p className="text-gray-500 dark:text-gray-400">Creative Director</p>
               </div>
               <div className="flex flex-col items-center text-center">
@@ -123,34 +124,10 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold">Michael Johnson</h3>
                 <p className="text-gray-500 dark:text-gray-400">Operations Manager</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-4.jpg" alt="Team Member" fill className="object-cover rounded-full" />
-                </div>
-                <h3 className="text-xl font-bold">Sarah Williams</h3>
-                <p className="text-gray-500 dark:text-gray-400">Lead Designer</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-5.jpg" alt="Team Member" fill className="object-cover rounded-full" />
-                </div>
-                <h3 className="text-xl font-bold">David Chen</h3>
-                <p className="text-gray-500 dark:text-gray-400">Photography Director</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-6.jpg" alt="Team Member" fill className="object-cover rounded-full" />
-                </div>
-                <h3 className="text-xl font-bold">Emily Rodriguez</h3>
-                <p className="text-gray-500 dark:text-gray-400">Contracts Manager</p>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-4">
-                  <Image src="/images/team-7.jpg" alt="Team Member" fill className="object-cover rounded-full" />
-                </div>
-                <h3 className="text-xl font-bold">Robert Kim</h3>
-                <p className="text-gray-500 dark:text-gray-400">Film Director</p>
-              </div>
+              
+              
+              
+              
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-32 h-32 mb-4">
                   <Image src="/images/team-8.jpg" alt="Team Member" fill className="object-cover rounded-full" />
@@ -223,7 +200,7 @@ export default function AboutPage() {
                     Contact Us <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="bg-white text-dbdd-blue-900 hover:bg-gray-100 ">
                   <Link href="/portfolio">View Our Work</Link>
                 </Button>
               </div>

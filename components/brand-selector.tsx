@@ -6,6 +6,8 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import printing from "@/components/image/printingmachine.jpeg"
+import multimedia from "@/components/image/multimedia.jpg"
 
 export function BrandSelector() {
   const [activeTab, setActiveTab] = useState("dbdd")
@@ -56,7 +58,7 @@ export function BrandSelector() {
           <div className="flex justify-center">
             <div className="relative w-full max-w-[500px] aspect-video">
               <Image
-                src="/images/dbdd-preview.jpg"
+                src={printing}
                 alt="DBDD Production House"
                 fill
                 className="object-cover rounded-xl"
@@ -98,7 +100,7 @@ export function BrandSelector() {
           </div>
           <div className="flex justify-center">
             <div className="relative w-full max-w-[500px] aspect-video">
-              <Image src="/images/dddc-preview.jpg" alt="DDDC" fill className="object-cover rounded-xl" />
+              <Image src={multimedia} alt="DDDC" fill className="object-cover rounded-xl" />
             </div>
           </div>
         </div>

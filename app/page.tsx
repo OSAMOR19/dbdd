@@ -250,7 +250,7 @@ export default function Home() {
                     Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="bg-white text-dbdd-blue-900 hover:bg-gray-100">
                   <Link href="/portfolio">View Our Work</Link>
                 </Button>
               </div>

@@ -51,20 +51,20 @@ export function MainNav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        {/* Left Logo */}
+        {/* Left Logo - Visible on both mobile and desktop */}
         <div className="flex items-center">
-          <Link href="/" className="hidden md:flex items-center">
+          <Link href="/" className="flex items-center">
             <Image 
               src="/images/dbdd-logo.png" 
               alt="DBDD Logo" 
               width={70} 
-              height={35} 
+              height={45} 
               className="object-contain" 
             />
           </Link>
         </div>
         
-        {/* Centered Navigation */}
+        {/* Centered Navigation - Desktop only */}
         <nav className="hidden gap-6 md:flex justify-center">
           {routes.map((route) => (
             <Link
@@ -82,7 +82,8 @@ export function MainNav() {
         
         {/* Right Logo and Controls */}
         <div className="flex items-center gap-4">
-          <Link href="/" className="hidden md:flex items-center">
+          {/* Right Logo - Visible on both mobile and desktop */}
+          <Link href="/" className="flex items-center">
             <Image 
               src="/images/dddc-logo.png" 
               alt="DDDC Logo" 
