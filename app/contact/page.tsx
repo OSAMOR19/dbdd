@@ -167,9 +167,9 @@ export default function ContactPage() {
                         <Mail className="h-6 w-6 text-gray-500 dark:text-gray-400" />
                         <div>
                           <h3 className="text-xl font-bold">Email</h3>
-                          <p className="text-gray-500 dark:text-gray-400">DBDD: info@dbdd.com</p>
-                          <p className="text-gray-500 dark:text-gray-400">DDDC: info@dddc.com</p>
-                          <p className="text-gray-500 dark:text-gray-400">General: contact@dbdd-dddc.com</p>
+                          <p className="text-gray-500 dark:text-gray-400">DBDD: info@dbdd.space</p>
+                          <p className="text-gray-500 dark:text-gray-400">DDDC: info@dddc.space</p>
+                          <p className="text-gray-500 dark:text-gray-400">General: hr@dbdd.space</p>
                         </div>
                       </div>
                     </CardContent>
